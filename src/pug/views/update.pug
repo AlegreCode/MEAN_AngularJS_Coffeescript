@@ -1,0 +1,28 @@
+section.row(ng-controller="updateController")
+  div(class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 ")
+    h1 Actualizar datos del usuario #[strong {{user.nombre}} {{user.apellido}}]
+    form
+      .form-group
+        label(for='nombre') Nombre
+        input.form-control(type='text', name='nombre' placeholder='Nombre' ng-model="user.nombre" ng-value="user.nombre" required)
+      .form-group
+        label(for='apellido') Apellido
+        input.form-control(type='text', name='apellido' placeholder="Apellido" ng-model="user.apellido" ng-value="user.apellido" required)
+      .form-group
+        label(for='edad') Edad
+        input.form-control(type='number', name='edad' placeholder="Edad" ng-model="user.edad" ng-value="user.edad" required)
+      .form-group
+        label(for='email') Email
+        input.form-control(type='email', name='email' placeholder="Email" ng-model="user.email" ng-value="user.email" required)
+      .form-group
+        label(for='tel') Teléfono
+        input.form-control(type='text', name='telefono' placeholder="Telefóno" ng-model="user.tel" ng-value="user.tel" required)
+      .form-group
+        label(for='direccion') Dirección
+        input.form-control(type='text', name='direccion' placeholder="Dirección" ng-model="user.direccion" ng-value="user.direccion" required)
+      button.btn.btn-primary(type='button' ng-click="goUpdate()") Actualizar
+      button.btn.btn-danger(type='button' ng-click="goList()") Cancelar
+    hr
+
+
+

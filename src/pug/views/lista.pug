@@ -1,0 +1,39 @@
+table(class="table table-striped table-hover" ng-controller="listaController")
+  caption LISTA DE USUARIOS
+  thead
+    tr
+      th N°
+      th NOMBRE
+      th APELLIDO
+      th EDAD
+      th EMAIL
+      th TELEFONO
+      th DIRECCION
+      th UPDATE/DELETE
+  tbody
+    - var n = 0
+    tr(ng-repeat="user in users.data")
+      td {{$index + 1}}
+      td {{user.nombre}}
+      td {{user.apellido}}
+      td {{user.edad}}
+      td {{user.email}}
+      td {{user.tel}}
+      td {{user.direccion}}
+      td
+        button(class="btn btn-success" ng-click="goUpdate(user)")
+          i.fa.fa-edit(aria-hidden='true')
+        button(class="btn btn-danger")
+          i.fa.fa-trash(aria-hidden='true' ng-click="goDelete(user)")
+    tr
+      form
+        td #
+        td: input(type="text", name="nombre" class="form-control" ng-model="user.nombre")
+        td: input(type="text", name="apellido" class="form-control" ng-model="user.apellido")
+        td: input(type="number", name="edad" class="form-control" ng-model="user.edad")
+        td: input(type="email", name="email" class="form-control" ng-model="user.email")
+        td: input(type="tel", name="tel" class="form-control" ng-model="user.tel")
+        td: input(type="text", name="direccion" class="form-control" ng-model="user.direccion")
+        td
+          input(type="button", value="Agregar" class="btn btn-primary" ng-click="goAdd()")
+

@@ -1,0 +1,35 @@
+
+<section class="row" ng-controller="updateController">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 ">
+    <h1>Actualizar datos del usuario <strong>{{user.nombre}} {{user.apellido}}</strong></h1>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input class="form-control" type="text" name="nombre" placeholder="Nombre" ng-model="user.nombre" ng-value="user.nombre" required="required"/>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input class="form-control" type="text" name="apellido" placeholder="Apellido" ng-model="user.apellido" ng-value="user.apellido" required="required"/>
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input class="form-control" type="number" name="edad" placeholder="Edad" ng-model="user.edad" ng-value="user.edad" required="required"/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="email" name="email" placeholder="Email" ng-model="user.email" ng-value="user.email" required="required"/>
+      </div>
+      <div class="form-group">
+        <label for="tel">Teléfono</label>
+        <input class="form-control" type="text" name="telefono" placeholder="Telefóno" ng-model="user.tel" ng-value="user.tel" required="required"/>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input class="form-control" type="text" name="direccion" placeholder="Dirección" ng-model="user.direccion" ng-value="user.direccion" required="required"/>
+      </div>
+      <button class="btn btn-primary" type="button" ng-click="goUpdate()">Actualizar</button>
+      <button class="btn btn-danger" type="button" ng-click="goList()">Cancelar</button>
+    </form>
+    <hr/>
+  </div>
+</section>
